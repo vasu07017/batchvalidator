@@ -1,0 +1,150 @@
+batch name: PatchCheck.bat
+
+
+###################################   2024-08-19 17:00:34   Step Validation Started    ###################################
+STEP(10): INIT_PARAMETER CHECK (line 12)
+STEP(20): BEFORE_DIR_CHECK (line 17)
+STEP(40): DEL_AND_FILE_COPY (line 28)
+STEP(50): EBANGO_USERID_FILE_FORMAT_CHECK (line 50)
+STEP(60): AFTER_DIR_CHECK (line 56)
+⇒Step sequence correct: true
+⇒ Missing steps: 30
+###################################   2024-08-19 17:00:34   Step Validation Completed    ###################################
+
+
+###################################   2024-08-19 17:00:34   Path Validation Started    ###################################
+⇒ Init Parameters Paths are listed below:
+%AAAA_PATH%\%SAMPLE_FILE%
+%BBBB_TOBEPROCESSED%
+%TT_LOGS%
+%KBC_LOGS%
+
+
+⇒ Other then Init Parameters Paths are listed below:
+%AAAA_PATHS% (line 19)
+%BBBB_TOBEPROCESSED% (line 20)
+%TT_LOGS% (line 21)
+%BBBB_TOBEPROCESSED%\%SAMPLE_FILES% (line 30)
+%BBBB_TOBEPROCESSED%\%SAMPLE_FILE% (line 30)
+%BBBB_TOBEPROCESSED%\%SAMPLE_FILES% (line 31)
+%BBBB_TOBEPROCESSED%\%SAMPLE_FILES% (line 34)
+%BBBB_TOBEPROCESSED%\%SAMPLE_FILES% (line 34)
+%BBBB_TOBEPROCESSED%\%SAMPLE_FILES% (line 36)
+%BBBB_TOBEPROCESSED%\%SAMPLE_FILE% (line 36)
+%BBBB_TOBEPROCESSED%\%SAMPLE_FILES% (line 37)
+%BBBB_TOBEPROCESSED%\%SAMPLE_FILES% (line 40)
+%BBBB_TOBEPROCESSED%\%SAMPLE_FILES% (line 40)
+%BBBB_TOBEPROCESSED%\%SAMPLE_FILES% (line 43)
+%BBBB_TOBEPROCESSED% (line 44)
+%AAAA_PATHS% (line 46)
+%BBBB_TOBEPROCESSED%\%SAMPLE_FILES% (line 46)
+%BBBB_TOBEPROCESSED% (line 48)
+%BBBB_TOBEPROCESSED%\%SAMPLE_FILES% (line 52)
+%CSV_PRECHECK_EXE% (line 53)
+%TT_LOGS%\%SAMPLE_FORMAT_CHECK_RESULT_LOG% (line 53)
+%AAAA_PATHS% (line 58)
+%BBBB_TOBEPROCESSED% (line 59)
+%TT_LOGS% (line 60)
+
+
+⇒ Paths used but not declared in Init Parameters:
+%AAAA_PATHS% (line 19)
+%BBBB_TOBEPROCESSED%\%SAMPLE_FILES% (line 30)
+%BBBB_TOBEPROCESSED%\%SAMPLE_FILE% (line 30)
+%BBBB_TOBEPROCESSED%\%SAMPLE_FILES% (line 31)
+%BBBB_TOBEPROCESSED%\%SAMPLE_FILES% (line 34)
+%BBBB_TOBEPROCESSED%\%SAMPLE_FILES% (line 34)
+%BBBB_TOBEPROCESSED%\%SAMPLE_FILES% (line 36)
+%BBBB_TOBEPROCESSED%\%SAMPLE_FILE% (line 36)
+%BBBB_TOBEPROCESSED%\%SAMPLE_FILES% (line 37)
+%BBBB_TOBEPROCESSED%\%SAMPLE_FILES% (line 40)
+%BBBB_TOBEPROCESSED%\%SAMPLE_FILES% (line 40)
+%BBBB_TOBEPROCESSED%\%SAMPLE_FILES% (line 43)
+%AAAA_PATHS% (line 46)
+%BBBB_TOBEPROCESSED%\%SAMPLE_FILES% (line 46)
+%BBBB_TOBEPROCESSED%\%SAMPLE_FILES% (line 52)
+%CSV_PRECHECK_EXE% (line 53)
+%TT_LOGS%\%SAMPLE_FORMAT_CHECK_RESULT_LOG% (line 53)
+%AAAA_PATHS% (line 58)
+
+
+⇒ Ambiguous Path - Confirmation Required:
+%AAAA_PATH% (line 13): 
+%SAMPLE_FILE% (line 13): 
+%SAMPLE_FILES% (line 30): 
+%SAMPLE_FILE% (line 30): 
+%SAMPLE_FILES% (line 31): 
+%vbsPath% (line 32): 
+%SAMPLE_FILES% (line 34): 
+%SAMPLE_FILES% (line 34): 
+%SAMPLE_FILES% (line 36): 
+%SAMPLE_FILE% (line 36): 
+%SAMPLE_FILES% (line 37): 
+%SAMPLE_FILES% (line 40): 
+%SAMPLE_FILES% (line 40): 
+%SAMPLE_FILES% (line 43): 
+%SAMPLE_FILES% (line 46): 
+%P IN ('dir /A-d /b /O:N "% (line 52): Path contains spaces or quotes
+%\% (line 52): 
+%P % (line 53): Path contains spaces or quotes
+%\% (line 53): 
+
+###################################   2024-08-19 17:00:34   Path Validation Completed    ###################################
+
+###################################   2024-08-19 17:00:34   Dir Check Started    ###################################
+⇒Paths from BEFORE_DIR_CHECK:
+%AAAA_PATHS%
+%BBBB_TOBEPROCESSED%
+%TT_LOGS%
+
+⇒Paths from AFTER_DIR_CHECK:
+%AAAA_PATHS%
+%BBBB_TOBEPROCESSED%
+%TT_LOGS%
+
+Verification Results:
+⇒ verified: ok
+###################################   2024-08-19 17:00:34   Dir Check Completed    ###################################
+
+###################################   2024-08-19 17:00:34   InitFile Check Started    ###################################
+⇒ Paths checked from STEP10_INIT_PARAMETER CHECK:
+AAAA_PATH
+SAMPLE_FILE
+BBBB_TOBEPROCESSED
+TT_LOGS
+KBC_LOGS
+
+⇒ Paths found in init file and nested init files:
+OSD_HANDOFF_KL_EBANGO_PATH
+TT_LOGS
+KBC_LOGS
+KDC_LOGS
+BBBB
+
+⇒ Paths missing in init file:
+AAAA_PATH
+SAMPLE_FILE
+BBBB_TOBEPROCESSED
+###################################   2024-08-19 17:00:34   InitFile Check Completed    ###################################
+
+###################################   2024-08-19 17:00:34    Command Analysis Started    ###################################
+DEL Command (30)
+Path: %BBBB_TOBEPROCESSED%\%SAMPLE_FILE%
+Parameters: /F, /Q
+Sleep: true
+DEL Command (34)
+Path: %BBBB_TOBEPROCESSED%\%SAMPLE_FILES%
+Parameters: /F, /Q
+DEL Command (36)
+Path: %BBBB_TOBEPROCESSED%\%SAMPLE_FILE%
+Parameters: /F, /Q
+Sleep: false
+DEL Command (40)
+Path: %BBBB_TOBEPROCESSED%\%SAMPLE_FILES%
+Parameters: /F, /Q
+ROBOCOPY Command (46)
+Source Path: %AAAA_PATHS%
+Destination Path: %BBBB_TOBEPROCESSED%\%SAMPLE_FILES%
+Parameters: /IS, /R:3, /W:10
+
+###################################   2024-08-19 17:00:34   Command Analysis Completed    ###################################

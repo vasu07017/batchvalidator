@@ -1,0 +1,35 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>pathextractions</RootNamespace>
+    <TargetFramework>net8.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="CommandValidatord.vb" />
+    <Compile Remove="PathValidators.vb" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="jsconfig1.json" />
+    <None Remove="OutputLog\CommandReport.log" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="jsconfig1.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Configuration" Version="8.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Binder" Version="8.0.2" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="8.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="OutputLog\" />
+  </ItemGroup>
+
+</Project>
